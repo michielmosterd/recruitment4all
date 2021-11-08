@@ -1,0 +1,29 @@
+{
+    "namespace": "r4a",
+    "name": "person",
+    "type": "BASIC",
+    "extendsType": "commons.entity",
+    "valueTypes": [
+        { "name": "firstName"},
+        { "name": "lastName", "required": true},
+        { "name": "telephone"},
+        { "name": "emailAddress", "dataType": "EMAIL"}
+    ],
+    "formulas": [
+        { 
+            "valueType": "name",
+            "formula": "{{firstName}} {{lastName}}"
+        }
+    ],
+    "views": [
+        {
+            "name": "Overview",
+            "defaultView": true,
+            "defaultSort": "firstName",
+            "values": [
+                "firstName",
+                "lastName"
+            ]
+        }
+    ]
+}
